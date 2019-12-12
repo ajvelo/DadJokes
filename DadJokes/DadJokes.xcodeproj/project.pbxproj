@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E75E8CD23A29BC000A70BB9 /* DadJokes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DadJokes.entitlements; sourceTree = "<group>"; };
 		4EAB37F223A26E55005D840F /* DadJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DadJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAB37F523A26E55005D840F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EAB37F723A26E55005D840F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		4EAB37F423A26E55005D840F /* DadJokes */ = {
 			isa = PBXGroup;
 			children = (
+				4E75E8CD23A29BC000A70BB9 /* DadJokes.entitlements */,
 				4EAB380E23A287DE005D840F /* Joke+CoreDataClass.swift */,
 				4EAB380F23A287DE005D840F /* Joke+CoreDataProperties.swift */,
 				4EAB37F523A26E55005D840F /* AppDelegate.swift */,
@@ -304,7 +306,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DadJokes/DadJokes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DadJokes/Preview Content\"";
 				DEVELOPMENT_TEAM = ZDF4HA4PDK;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +319,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreasVelounias.DadJokes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,7 +329,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DadJokes/DadJokes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DadJokes/Preview Content\"";
 				DEVELOPMENT_TEAM = ZDF4HA4PDK;
 				ENABLE_PREVIEWS = YES;
@@ -335,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreasVelounias.DadJokes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
