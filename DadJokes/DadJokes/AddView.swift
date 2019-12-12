@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddView: View {
     @Environment(\.managedObjectContext) var moc // Managed Object Context
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var setup = ""
     @State private var punchline = ""
     @State private var rating = "Silence"
@@ -18,7 +18,7 @@ struct AddView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            Form {
                 Section {
                     TextField("Setup", text: $setup)
                     TextField("Punchline", text: $punchline)
@@ -38,6 +38,7 @@ struct AddView: View {
                     // Save object to Core Data
                     do {
                         try self.moc.save()
+                        self.presentationMode.wrappedValue.dismiss()
                     } catch {
                         print(error.localizedDescription)
                     }
