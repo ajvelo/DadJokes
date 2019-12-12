@@ -15,6 +15,8 @@
 		4EAB380223A26E57005D840F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB380123A26E57005D840F /* Preview Assets.xcassets */; };
 		4EAB380523A26E57005D840F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAB380323A26E57005D840F /* LaunchScreen.storyboard */; };
 		4EAB380D23A281CB005D840F /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB380C23A281CB005D840F /* EmojiView.swift */; };
+		4EAB381023A287DE005D840F /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB380E23A287DE005D840F /* Joke+CoreDataClass.swift */; };
+		4EAB381123A287DE005D840F /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB380F23A287DE005D840F /* Joke+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4EAB380423A26E57005D840F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EAB380623A26E57005D840F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EAB380C23A281CB005D840F /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		4EAB380E23A287DE005D840F /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4EAB380F23A287DE005D840F /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		4EAB37F423A26E55005D840F /* DadJokes */ = {
 			isa = PBXGroup;
 			children = (
+				4EAB380E23A287DE005D840F /* Joke+CoreDataClass.swift */,
+				4EAB380F23A287DE005D840F /* Joke+CoreDataProperties.swift */,
 				4EAB37F523A26E55005D840F /* AppDelegate.swift */,
 				4EAB37F723A26E55005D840F /* SceneDelegate.swift */,
 				4EAB37FC23A26E55005D840F /* ContentView.swift */,
@@ -152,11 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAB381023A287DE005D840F /* Joke+CoreDataClass.swift in Sources */,
 				4EAB37FB23A26E55005D840F /* DadJokes.xcdatamodeld in Sources */,
 				4EAB37F623A26E55005D840F /* AppDelegate.swift in Sources */,
 				4EAB37FD23A26E55005D840F /* ContentView.swift in Sources */,
 				4EAB37F823A26E55005D840F /* SceneDelegate.swift in Sources */,
 				4EAB380D23A281CB005D840F /* EmojiView.swift in Sources */,
+				4EAB381123A287DE005D840F /* Joke+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
