@@ -22,10 +22,16 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        List {
-            ForEach(jokes, id: \.setup) { joke in
-                Text(joke.setup)
-            }
+        NavigationView {
+            List {
+                ForEach(jokes, id: \.setup) { joke in
+                    NavigationLink(destination:
+                    Text(joke.punchline)) {
+                        EmojiView(for: joke.rating)
+                        Text(joke.setup)
+                    }
+                }
+            }.navigationBarTitle("All Groan Up")
         }
     }
 }
