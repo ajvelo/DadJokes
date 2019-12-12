@@ -11,8 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @FetchRequest(entity: Joke.entity(), sortDescriptors: [
         NSSortDescriptor(keyPath: \Joke.setup, ascending: true)
-    ])
-    var jokes: FetchedResults<Joke>
+    ]) var jokes: FetchedResults<Joke>
+    
+    @State private var showingAddJoke = false
     
     var body: some View {
         NavigationView {
