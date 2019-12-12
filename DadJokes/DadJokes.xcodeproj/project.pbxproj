@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E75E8F923A2AAE200A70BB9 /* JokeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75E8F823A2AAE200A70BB9 /* JokeCard.swift */; };
 		4EAB37F623A26E55005D840F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB37F523A26E55005D840F /* AppDelegate.swift */; };
 		4EAB37F823A26E55005D840F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB37F723A26E55005D840F /* SceneDelegate.swift */; };
 		4EAB37FB23A26E55005D840F /* DadJokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EAB37F923A26E55005D840F /* DadJokes.xcdatamodeld */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4E75E8CD23A29BC000A70BB9 /* DadJokes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DadJokes.entitlements; sourceTree = "<group>"; };
+		4E75E8F823A2AAE200A70BB9 /* JokeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCard.swift; sourceTree = "<group>"; };
 		4EAB37F223A26E55005D840F /* DadJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DadJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAB37F523A26E55005D840F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EAB37F723A26E55005D840F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				4EAB37F523A26E55005D840F /* AppDelegate.swift */,
 				4EAB37F723A26E55005D840F /* SceneDelegate.swift */,
 				4EAB37FC23A26E55005D840F /* ContentView.swift */,
+				4E75E8F823A2AAE200A70BB9 /* JokeCard.swift */,
 				4EAB381223A28A65005D840F /* AddView.swift */,
 				4EAB380C23A281CB005D840F /* EmojiView.swift */,
 				4EAB37FE23A26E57005D840F /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EAB381023A287DE005D840F /* Joke+CoreDataClass.swift in Sources */,
+				4E75E8F923A2AAE200A70BB9 /* JokeCard.swift in Sources */,
 				4EAB37FB23A26E55005D840F /* DadJokes.xcdatamodeld in Sources */,
 				4EAB37F623A26E55005D840F /* AppDelegate.swift in Sources */,
 				4EAB37FD23A26E55005D840F /* ContentView.swift in Sources */,
