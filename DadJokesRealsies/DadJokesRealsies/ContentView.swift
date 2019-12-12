@@ -21,13 +21,18 @@ struct ContentView: View {
             List {
                 ForEach(jokes, id: \.setup) { joke in
                     NavigationLink(destination:
-                    Text(joke.punchline)) {
+                    Text(joke.punchline).frame(maxWidth: .infinity, maxHeight: .infinity)) {
                         EmojiView(for: joke.rating)
                         Text(joke.setup)
                     }
                 }
             .onDelete(perform: removeJokes(at:))
+                
+                Button("Add Joke") {
+                    self.showingAddJoke.toggle()
+                }
             }
+        .listStyle(SidebarListStyle())
             .sheet(isPresented: $showingAddJoke) {
                 AddView().environment(\.managedObjectContext, self.moc)
             }

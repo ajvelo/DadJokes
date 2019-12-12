@@ -17,33 +17,33 @@ struct AddView: View {
     let ratings = ["Sob", "Sigh", "Silence", "Smirk"]
     
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    TextField("Setup", text: $setup)
-                    TextField("Punchline", text: $punchline)
-                    
-                    Picker("Rating", selection: $rating) {
-                        ForEach(ratings, id: \.self) { rating in
-                            Text(rating)
-                        }
-                    }
-                }
-                Button("Add Joke") {
-                    let newJoke = Joke(context: self.moc)
-                    newJoke.setup = self.setup
-                    newJoke.punchline = self.punchline
-                    newJoke.rating = self.rating
-                    
-                    // Save object to Core Data
-                    do {
-                        try self.moc.save()
-                        self.presentationMode.wrappedValue.dismiss()
-                    } catch {
-                        print(error.localizedDescription)
+        Form {
+            Section {
+                TextField("Setup", text: $setup)
+                TextField("Punchline", text: $punchline)
+                
+                Picker("Rating", selection: $rating) {
+                    ForEach(ratings, id: \.self) { rating in
+                        Text(rating)
                     }
                 }
             }
+            Button("Add Joke") {
+                let newJoke = Joke(context: self.moc)
+                newJoke.setup = self.setup
+                newJoke.punchline = self.punchline
+                newJoke.rating = self.rating
+                
+                // Save object to Core Data
+                do {
+                    try self.moc.save()
+                    self.presentationMode.wrappedValue.dismiss()
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            .frame(minWidth: 400)
+            .padding()
         }
     }
 }
