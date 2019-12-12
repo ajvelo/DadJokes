@@ -15,6 +15,8 @@
 		4E75E8E823A29CAD00A70BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E75E8E623A29CAD00A70BB9 /* Main.storyboard */; };
 		4E75E8F223A29D1B00A70BB9 /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75E8F023A29D1B00A70BB9 /* Joke+CoreDataClass.swift */; };
 		4E75E8F323A29D1B00A70BB9 /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75E8F123A29D1B00A70BB9 /* Joke+CoreDataProperties.swift */; };
+		4E75E8F523A29DA200A70BB9 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75E8F423A29DA200A70BB9 /* EmojiView.swift */; };
+		4E75E8F723A29DAA00A70BB9 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75E8F623A29DAA00A70BB9 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		4E75E8EA23A29CAD00A70BB9 /* DadJokesRealsies.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DadJokesRealsies.entitlements; sourceTree = "<group>"; };
 		4E75E8F023A29D1B00A70BB9 /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4E75E8F123A29D1B00A70BB9 /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E75E8F423A29DA200A70BB9 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		4E75E8F623A29DAA00A70BB9 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				4E75E8F123A29D1B00A70BB9 /* Joke+CoreDataProperties.swift */,
 				4E75E8DA23A29CAB00A70BB9 /* AppDelegate.swift */,
 				4E75E8DC23A29CAB00A70BB9 /* ContentView.swift */,
+				4E75E8F423A29DA200A70BB9 /* EmojiView.swift */,
+				4E75E8F623A29DAA00A70BB9 /* AddView.swift */,
 				4E75E8E123A29CAC00A70BB9 /* Assets.xcassets */,
 				4E75E8E623A29CAD00A70BB9 /* Main.storyboard */,
 				4E75E8E923A29CAD00A70BB9 /* Info.plist */,
@@ -154,11 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E75E8F723A29DAA00A70BB9 /* AddView.swift in Sources */,
 				4E75E8F223A29D1B00A70BB9 /* Joke+CoreDataClass.swift in Sources */,
 				4E75E8F323A29D1B00A70BB9 /* Joke+CoreDataProperties.swift in Sources */,
 				4E75E8E023A29CAB00A70BB9 /* DadJokesRealsies.xcdatamodeld in Sources */,
 				4E75E8DD23A29CAB00A70BB9 /* ContentView.swift in Sources */,
 				4E75E8DB23A29CAB00A70BB9 /* AppDelegate.swift in Sources */,
+				4E75E8F523A29DA200A70BB9 /* EmojiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
