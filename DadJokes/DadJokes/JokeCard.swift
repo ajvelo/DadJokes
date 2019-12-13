@@ -10,6 +10,9 @@ import SwiftUI
 import CoreData
 
 struct JokeCard: View {
+    @Environment(\.managedObjectContext) var moc
+    @State private var showingPunchline = false
+    @State private var dragAmount = CGSize.zero
     var joke: Joke
     
     var body: some View {
@@ -24,6 +27,8 @@ struct JokeCard: View {
                     .font(.title)
                     .lineLimit(10)
                     .padding([.horizontal, .bottom])
+                    .blur(radius: self.showingPunchline ? 0 : 6)
+                    .opacity(self.showingPunchline ? 1 : 0.25)
             }
             .multilineTextAlignment(.center)
             .clipShape(RoundedRectangle(cornerRadius: 25))
@@ -32,11 +37,39 @@ struct JokeCard: View {
                 .shadow(color: .black, radius: 5, x: 0, y: 0)
             )
             
+            .onTapGesture {
+                withAnimation {
+                    self.showingPunchline.toggle()
+                }
+            }
+            
             EmojiView(for: joke.rating)
                 .font(.system(size: 72))
         }
         .frame(minHeight: 0, maxHeight:  .infinity)
         .frame(width: 300)
+        .offset(y: dragAmount.height)
+    .gesture(
+        DragGesture()
+            .onChanged {self.dragAmount = $0.translation }
+            .onEnded { _ in
+                if self.dragAmount.height < -200 {
+                    // delete joke
+                    withAnimation {
+                        self.dragAmount = CGSize(width: 0, height: -1000)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                            self.moc.delete(self.joke)
+                            try? self.moc.save()
+                        })
+                    }
+                } else {
+                    // recenter joke
+                    self.dragAmount = .zero
+                }
+            }
+        )
+            .animation(.spring())
     }
 }
 

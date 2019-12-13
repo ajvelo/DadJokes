@@ -25,7 +25,7 @@ struct ContentView: View {
                     ForEach(jokes, id: \.setup) { joke in
                         JokeCard(joke: joke)
                     }
-                }
+                }.padding()
             }
             
             Button("Add Joke") {
