@@ -17,30 +17,33 @@ struct JokeCard: View {
     
     var body: some View {
         VStack {
-            VStack {
-                Text(self.joke.setup)
-                    .font(.largeTitle)
-                    .lineLimit(10)
-                    .padding([.horizontal])
-                
-                Text(self.joke.punchline)
-                    .font(.title)
-                    .lineLimit(10)
-                    .padding([.horizontal, .bottom])
-                    .blur(radius: self.showingPunchline ? 0 : 6)
-                    .opacity(self.showingPunchline ? 1 : 0.25)
-            }
-            .multilineTextAlignment(.center)
-            .clipShape(RoundedRectangle(cornerRadius: 25))
-            .background(RoundedRectangle(cornerRadius: 25)
-                .fill(Color.white)
-                .shadow(color: .black, radius: 5, x: 0, y: 0)
-            )
-            
-            .onTapGesture {
-                withAnimation {
-                    self.showingPunchline.toggle()
+            GeometryReader { geo in
+                VStack {
+                    Text(self.joke.setup)
+                        .font(.largeTitle)
+                        .lineLimit(10)
+                        .padding([.horizontal])
+                    
+                    Text(self.joke.punchline)
+                        .font(.title)
+                        .lineLimit(10)
+                        .padding([.horizontal, .bottom])
+                        .blur(radius: self.showingPunchline ? 0 : 6)
+                        .opacity(self.showingPunchline ? 1 : 0.25)
                 }
+                .multilineTextAlignment(.center)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .background(RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.white)
+                    .shadow(color: .black, radius: 5, x: 0, y: 0)
+                )
+                
+                .onTapGesture {
+                    withAnimation {
+                        self.showingPunchline.toggle()
+                    }
+                }
+                .rotation3DEffect(.degrees(-Double(geo.frame(in: .global).minX) / 10), axis: (x: 0, y: 1, z: 0))
             }
             
             EmojiView(for: joke.rating)
